@@ -601,7 +601,7 @@ form select option {
     margin: 0 1% 0 0;
     width: 100%;
     height: 50px;
-    background-color: #8a1719;
+    background-color: #bb1d20;
     color: white;
     font-size: 15px;
     font-weight: 400;
@@ -609,8 +609,10 @@ form select option {
     text-align: center;
     float: left;
     cursor: pointer; }
-  .town-list .comp-side-bar .tabs .active {
-    background-color: #bb1d20; }
+  .town-list .comp-side-bar .tab:hover {
+    background-color: #8a1719; }
+  .town-list .comp-side-bar .tab.active {
+    background-color: #8a1719; }
   .town-list .comp-side-bar .tab-content {
     min-height: 320px; }
   .town-list .comp-side-bar .tab-item-side-bar {
@@ -1073,9 +1075,12 @@ header {
   .windows-info .window {
     margin: 0 0 20px 0;
     padding: 0;
-    position: relative; }
+    position: relative;
+    height: 270px;
+    overflow: hidden; }
   .windows-info .window img {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
   .windows-info .text-cont {
     position: absolute;
     bottom: 0;
@@ -1211,8 +1216,15 @@ header {
   line-height: 44px;
   text-transform: uppercase; }
 
+.shares .apartment a {
+  display: block;
+  height: 100px;
+  height: 280px;
+  overflow: hidden; }
+
 .shares .apartment img {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .shares .apartment .text {
   margin: 25px 0 20px 10px;
@@ -1357,7 +1369,8 @@ header {
   .news-container .news .image {
     display: block; }
   .news-container .news img {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
   .news-container .news h2 {
     margin: 20px 0 10px 0;
     color: black;
@@ -1496,10 +1509,14 @@ header {
         position: relative;
         float: left; }
       .town-list .catalog-main .town-images .catalog-town a {
-        display: block; }
+        display: block;
+        height: 180px; }
       .town-list .catalog-main .town-images .catalog-town img {
         display: block;
-        width: 100%; }
+        width: 100%;
+        height: 100%; }
+      .town-list .catalog-main .town-images a.link-2 {
+        height: 0; }
       .town-list .catalog-main .town-images .catalog-town .name-of-town {
         margin: -50px 0 0 0;
         position: absolute;
@@ -1524,7 +1541,11 @@ header {
   .town-list .catalog-main {
     display: block; }
     .town-list .catalog-main .town-images .catalog-town {
-      max-width: 215px; } }
+      max-width: 215px; }
+    .town-list .catalog-main .town-images .catalog-town a {
+      height: 150px; }
+    .town-list .catalog-main .town-images .catalog-town a.link-2 {
+      height: 0; } }
 
 .catalog-object .obj-cont {
   margin: 0 0 20px 0; }
@@ -1544,6 +1565,7 @@ header {
     font-size: 30px;
     font-weight: 400; }
   .catalog-object .obj-cont .link-2 {
+    height: 0;
     float: right;
     color: #bb1d20;
     font-size: 15px;
@@ -1611,7 +1633,8 @@ header {
   .catalog-object .obj-cont {
     margin: 0 0 45px 0; }
     .catalog-object .obj-cont .image {
-      display: block; }
+      display: block;
+      height: 200px !important; }
     .catalog-object .obj-cont img {
       display: block;
       width: 100%; }
@@ -1626,6 +1649,11 @@ header {
       font-size: 20px;
       font-weight: 400; } }
 
+@media screen and (min-width: 992px) {
+  .catalog-object .obj-cont .image {
+    display: block;
+    height: 170px !important; } }
+
 .catalog-object-details .catalog-main .obj-cont h2 {
   margin: 0 0 20px 10px;
   color: black;
@@ -1635,7 +1663,8 @@ header {
 
 .catalog-object-details .catalog-main .obj-cont img {
   display: block;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .catalog-object-details .catalog-main .obj-cont .obj-info {
   margin: 25px 0 0 0; }
@@ -1700,43 +1729,13 @@ header {
       width: 290px;
       height: 200px;
       float: left; }
-    .catalog-object-details .catalog-main .obj-cont img {
-      display: block;
-      width: 100%; }
-    .catalog-object-details .catalog-main .obj-cont .obj-info {
-      margin: 25px 0 0 0; }
-      .catalog-object-details .catalog-main .obj-cont .obj-info p {
-        margin-bottom: 20px;
-        color: black;
-        font-size: 15px;
-        font-weight: 400; }
-        .catalog-object-details .catalog-main .obj-cont .obj-info p span {
-          font-weight: 700; }
-      .catalog-object-details .catalog-main .obj-cont .obj-info p.text {
-        margin: 10px 0 20px 0; }
-    .catalog-object-details .catalog-main .obj-cont h3 {
-      color: #bb1d20;
-      font-size: 22px;
-      font-weight: 400;
-      text-transform: uppercase; }
+    .catalog-object-details .catalog-main .obj-cont .obj-info p.text {
+      margin: 10px 0 20px 0; }
     .catalog-object-details .catalog-main .obj-cont .logo-company {
       margin: 20px 60px 20px 0;
-      float: left;
-      display: block;
-      width: 175px;
-      height: 65px; }
-    .catalog-object-details .catalog-main .obj-cont .logo-company img {
-      width: 100%; }
-    .catalog-object-details .catalog-main .obj-cont .mail-cont {
-      margin-bottom: 35px;
       float: left; }
-    .catalog-object-details .catalog-main .obj-cont .email {
-      color: black;
-      font-size: 15px;
-      line-height: 35px;
-      font-weight: 400; }
-    .catalog-object-details .catalog-main .obj-cont .email:hover {
-      color: #bb1d20; }
+    .catalog-object-details .catalog-main .obj-cont .mail-cont {
+      float: left; }
     .catalog-object-details .catalog-main .obj-cont .link {
       margin: 80px 30px 0 0;
       float: right;
@@ -1761,84 +1760,22 @@ header {
       .catalog-object-details .catalog-main .photo-cont .fancybox {
         display: block;
         float: left;
-        width: 33.3333%; }
+        width: 33.3333%;
+        height: 120px; }
       .catalog-object-details .catalog-main .photo-cont .fancybox img {
         padding: 10px; } }
 
 @media screen and (min-width: 992px) {
-  .catalog-object-details .check-box-comp-cont {
-    display: none; }
-  .catalog-object-details .catalog-main {
-    margin: 0 0 0 2%;
-    width: 73%; }
-    .catalog-object-details .catalog-main .obj-cont h2 {
-      margin: 0 0 20px 10px;
-      color: black;
-      font-size: 22px;
-      font-weight: 400;
-      text-transform: uppercase; }
-    .catalog-object-details .catalog-main .obj-cont .img-cont {
-      margin: 0 15px 0 0;
-      width: 430px;
-      height: 280px;
-      float: left; }
-    .catalog-object-details .catalog-main .obj-cont img {
-      display: block;
-      width: 100%; }
-    .catalog-object-details .catalog-main .obj-cont .obj-info {
-      margin: 25px 0 0 0; }
-      .catalog-object-details .catalog-main .obj-cont .obj-info p {
-        margin-bottom: 15px;
-        color: black;
-        font-size: 15px;
-        font-weight: 400; }
-        .catalog-object-details .catalog-main .obj-cont .obj-info p span {
-          font-weight: 700; }
-      .catalog-object-details .catalog-main .obj-cont .obj-info p.text {
-        margin: 40px 0 20px 0; }
-    .catalog-object-details .catalog-main .obj-cont h3 {
-      color: #bb1d20;
-      font-size: 22px;
-      font-weight: 400;
-      text-transform: uppercase; }
-    .catalog-object-details .catalog-main .obj-cont .logo-company {
-      margin: 20px 60px 20px 0;
-      float: left;
-      display: block;
-      width: 175px;
-      height: 65px; }
-    .catalog-object-details .catalog-main .obj-cont .logo-company img {
-      width: 100%; }
-    .catalog-object-details .catalog-main .obj-cont .mail-cont {
-      margin-bottom: 35px;
-      float: left; }
-    .catalog-object-details .catalog-main .obj-cont .email {
-      color: black;
-      font-size: 15px;
-      line-height: 35px;
-      font-weight: 400; }
-    .catalog-object-details .catalog-main .obj-cont .email:hover {
-      color: #bb1d20; }
-    .catalog-object-details .catalog-main .obj-cont .link {
-      margin: 80px 30px 0 0;
-      float: right;
-      color: #bb1d20;
-      font-size: 14px;
-      font-weight: 400;
-      text-decoration: underline;
-      position: relative; }
-    .catalog-object-details .catalog-main .obj-cont .margin-minus {
-      margin-top: 0;
-      margin-bottom: 30px; }
-    .catalog-object-details .catalog-main .obj-cont .link:after {
-      content: ">>";
-      position: absolute;
-      top: 1px;
-      right: -25px; }
-    .catalog-object-details .catalog-main .obj-cont .link:hover {
-      color: black; }
-    .catalog-object-details .catalog-main .photo-cont .fancybox {
-      width: 33.3333%; } }
+  .catalog-object-details .catalog-main .obj-cont .img-cont {
+    width: 430px;
+    height: 280px; }
+  .catalog-object-details .catalog-main .obj-cont .obj-info p {
+    margin-bottom: 15px; }
+  .catalog-object-details .catalog-main .obj-cont .obj-info p.text {
+    margin: 40px 0 20px 0; }
+  .catalog-object-details .catalog-main .photo-cont .fancybox {
+    width: 33.3333%;
+    height: 150px; } }
 
 footer {
   background-color: #101010;

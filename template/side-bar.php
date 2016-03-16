@@ -2,7 +2,7 @@
     <div class="comp-cont">
         <div class="comp-side-bar">
             <div class="tabs clearfix">
-                <div class="tab re active">Аренда</div>
+                <div class="tab re">Аренда</div>
                 <div class="tab sa">Продажа</div>
             </div>
 

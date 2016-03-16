@@ -34,7 +34,8 @@
       margin: 0 1% 0 0;
       width: 100%;
       height: 50px;
-      background-color: rgb(138, 23, 25);
+
+      background-color: #bb1d20;
       color: white;
       font-size: 15px;
       font-weight: 400;
@@ -43,17 +44,12 @@
       float: left;
       cursor: pointer;
     }
-    .tabs .active{
-      background-color: #bb1d20;
+    .tab:hover{
+      background-color: rgb(138, 23, 25);
     }
-    //.tab:last-child{
-    //  min-width: 60px;
-    //  width: 21%;
-    //  height: 30px;
-    //  background: url("../images/watering-can.png") no-repeat center center;
-    //  background-color: rgb(40, 38, 38);
-    //  margin: 0;
-    //}
+    .tab.active{
+      background-color: rgb(138, 23, 25);
+    }
     .tab-content{
       min-height: 320px;
     }
@@ -167,6 +163,7 @@
   }
 
   .swiming-towns{
+    //margin: 0 0 0 26%;
     position: absolute;
     z-index: 999999;
     top: 0;

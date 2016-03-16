@@ -103,6 +103,8 @@ $(function() {
     });
 });
 
+
+
 //Меню при нажатии на оренду или продажу
 $(".comp-side-bar .tabs .re").click(function(){
    $(".swiming-towns-cont .rent").toggleClass("active");
@@ -112,6 +114,18 @@ $(".comp-side-bar .tabs .sa").click(function(){
     $(".swiming-towns-cont .sale").toggleClass("active");
     $(".swiming-towns-cont .rent").removeClass("active");
 });
+
+
+//$(".swiming-towns-cont .rent").hover(function(){
+//    $(".swiming-towns-cont .rent").toggleClass("active");
+//    $(".comp-side-bar .tabs .re")
+//});
+//$(".swiming-towns-cont .sale").hover(function(){
+//    $(".swiming-towns-cont .sale").toggleClass("active");
+//});
+
+
+
 
 //hover effect
 

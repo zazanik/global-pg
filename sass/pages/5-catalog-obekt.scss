@@ -21,6 +21,7 @@
       font-weight: 400;
     }
     .link-2{
+      height: 0;
       float: right;
       color: rgb(187, 29, 32);
       font-size: 15px;
@@ -98,6 +99,7 @@
       margin: 0 0 45px 0;
       .image {
         display: block;
+        height: 200px !important;
       }
       img {
         display: block;
@@ -116,5 +118,11 @@
         font-weight: 400;
       }
     }
+  }
+}
+@media screen and  (min-width: 992px){
+  .catalog-object .obj-cont .image {
+    display: block;
+    height: 170px !important;
   }
 }
