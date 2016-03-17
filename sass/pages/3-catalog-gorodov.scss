@@ -1,27 +1,28 @@
-.town-list{
-  .up-line{
-    display: block;
-    height: 40px;
-    background-color: rgb(187, 29, 32);
-    .text{
-      text-align: center;
-      color: white;
-      font-size: 15px;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 40px;
-      position: relative;
-    }
-    .text:before{
-      content: "";
-      background: url("../images/arrow.png") no-repeat;
-      width: 23px;
-      height: 16px;
-      position: absolute;
-      top: 12px;
-      left: 0;
-    }
+.up-line{
+  display: block;
+  height: 40px;
+  background-color: rgb(187, 29, 32);
+  .text{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 40px;
+    position: relative;
   }
+  .text:before{
+    content: "";
+    background: url("../images/arrow.png") no-repeat;
+    width: 23px;
+    height: 16px;
+    position: absolute;
+    top: 12px;
+    left: 0;
+  }
+}
+
+.town-list{
 @media screen and (max-width: 767px) {
   .catalog-main {
     display: block;
@@ -82,13 +83,14 @@
 
 
 @media screen and (min-width: 768px){
+  .up-line{
+    display: none;
+  }
   .town-list{
     .mob-line{
       display: none;
     }
-    .up-line{
-      display: none;
-    }
+
     .catalog-main {
       float: left;
       width: 75%;

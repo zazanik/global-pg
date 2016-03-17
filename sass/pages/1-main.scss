@@ -107,34 +107,6 @@
   .tab-content .tab-item form{
     text-align: center;
   }
-  //.tab-content .tab-item form select{
-  //  width:100%;
-  //  -moz-appearance: none;
-  //  text-indent: 0.01px;
-  //  text-overflow: '';
-  //  border: none;
-  //  padding: 7px 50px 7px 10px !important;
-  //  line-height: 1 !important;
-  //  background: transparent;
-  //  outline: none;
-  //
-  //  -webkit-appearance: none;
-  //}
-  //.tab-content .tab-item form select option{
-  //  outline: none;
-  //}
-  //.tab-content .tab-item form select::-ms-expand {
-  //  display: none;
-  //}
-  //
-  //.wrap_select{
-  //  margin: 0 auto 40px auto;
-  //  width:90%;
-  //  overflow:hidden;
-  //  height:auto;
-  //  background: url("../images/trik_3.png") no-repeat center right 10px #FFF !important;
-  //  position: relative;
-  //}
 }
 
 //3-windows
@@ -144,7 +116,6 @@
     margin: 0 0 20px 0;
     padding: 0;
     position: relative;
-    height: 270px;
     overflow: hidden;
   }
   .window img{
@@ -401,22 +372,9 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 768px) {
   .main-slider{
     position: relative;
-
     .flexslider ul li img{
       height: 445px;
     }
@@ -482,6 +440,7 @@
   .windows-info .window{
     width: 31%;
     margin: 0 1% 0 1%;
+    height: 210px;
   }
   .first-banner{
     display: block;
@@ -507,5 +466,8 @@
   }
   .windows-info .window:first-child .text-cont h2{
     margin-top: 6px;
+  }
+  .windows-info .window{
+    height: 270px;
   }
 }

@@ -25,6 +25,42 @@
         <hr>
         <div>Создание сайта © Global Vision</div>
     </div>
+
+
+
+    <!--modal window for partner detail form-->
+
+    <div class="partners-details-form">
+        <div class="container">
+            <div class="modal_form">
+<!--                <span class="modal_close"></span>-->
+                <form action="#">
+                    <h3>Запрос на сотрудничество</h3>
+
+                    <label for="name-of-company">Название компании*</label>
+                    <input required id="name-of-company" type="text" placeholder=""/>
+
+                    <label for="LFF">Контактное лицо (ФИО)*</label>
+                    <input required id="LFF" type="text" placeholder=""/>
+
+                    <label for="telephon">Телефон*</label>
+                    <input required id="telephon" type="tel" placeholder=""/>
+
+                    <label for="email">E-mail*</label>
+                    <input required id="email" type="email" placeholder=""/>
+
+                    <textarea name="you message" id="message"></textarea>
+
+                    <input class="button" type="submit" value="Отправить"/>
+                </form>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </div>
+
+
+
+
 </footer>
 <script src="js/main.js"></script>
 </body>
