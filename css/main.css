@@ -120,13 +120,13 @@ a, a:hover, a:link, a:visited {
 .modal_form {
   width: 90%;
   max-width: 500px;
-  height: 650px;
+  max-height: 800px;
   border: none;
   background-color: #bb1d20;
   position: fixed;
   top: 45%;
   left: 50%;
-  margin-top: -325px;
+  margin-top: -400px;
   margin-left: -45%;
   display: none;
   opacity: 0;
@@ -209,7 +209,7 @@ a, a:hover, a:link, a:visited {
   outline: none; }
 
 .partners-details-form form .button {
-  margin: 25px 10% 0 0;
+  margin: 25px 10% 25px 0;
   float: right;
   width: 190px;
   height: 40px;
@@ -219,6 +219,12 @@ a, a:hover, a:link, a:visited {
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase; }
+
+.request-to-participate .modal_form {
+  max-width: 630px; }
+
+.visit-participate .modal_form {
+  max-width: 580px; }
 
 @media screen and (min-width: 570px) {
   .modal_form {
@@ -710,7 +716,9 @@ form select option {
     top: 12px;
     left: 0; }
   .town-list .comp-side-bar .tabs {
-    margin: 0 0 20px 0; }
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 9999; }
   .town-list .comp-side-bar .tab {
     margin: 0 1% 0 0;
     width: 100%;
@@ -807,18 +815,35 @@ form select option {
   .town-list .comp-side-bar .button:hover {
     background-color: #8a1719; }
 
-.town-list .rent {
-  display: none; }
+.town-list .swim-first {
+  display: none;
+  width: 75%;
+  height: 585px;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  z-index: 102; }
 
-.town-list .sale {
-  display: none; }
+.town-list .swim-second {
+  display: none;
+  width: 75%;
+  height: 585px;
+  position: absolute;
+  top: 0;
+  left: 25%; }
+
+.town-list .rent:hover {
+  display: block; }
+
+.town-list .sale:hover {
+  display: block; }
 
 .town-list .swiming-towns {
   position: absolute;
-  z-index: 999999;
+  z-index: 101;
   top: 0;
   right: 0;
-  width: 74%;
+  width: 99%;
   background-color: #bb1d20;
   min-height: 400px; }
   .town-list .swiming-towns .contry-cont {
@@ -900,39 +925,47 @@ header {
     height: 60px;
     position: absolute;
     top: 10px;
-    left: 40%; }
+    left: 50%; }
   header h1 img {
     width: 100%; }
   header .lang {
-    margin: 0 0 0 0;
+    width: 37px;
+    height: 27px;
     position: absolute;
+    right: 60px;
     top: 25px;
-    right: 50px; }
-  header .lang ul {
-    list-style-type: none;
-    background-color: transparent; }
-  header .lang ul:after {
+    text-align: center;
+    padding: 2px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400; }
+  header .lang:after {
     content: "";
     background: url("../images/trik.png");
     width: 9px;
     height: 5px;
     position: absolute;
-    top: 8px;
-    right: 5px;
+    top: 11px;
+    right: -2px;
     cursor: pointer; }
+  header .lang > a {
+    text-decoration: none;
+    color: white; }
+  header .lang ul {
+    display: none;
+    list-style-type: none; }
+  header .lang.open ul {
+    margin-top: 9px;
+    display: block;
+    text-align: center;
+    z-index: 999;
+    position: relative;
+    background: black;
+    border: 1px solid #ccc; }
   header .lang ul li {
-    margin: 0 0 10px 0;
-    padding: 0 0 0 5px;
-    width: 55px;
-    height: 25px;
-    color: white;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 400; }
-  header .lang ul li a {
-    display: block; }
-  header .lang ul li:nth-child(n+2) {
-    display: none; }
+    padding: 4px; }
+  header .lang.open ul li a {
+    text-decoration: none;
+    color: white; }
   header .country {
     color: white;
     font-size: 14px;
@@ -1331,8 +1364,6 @@ header {
 
 .shares .apartment a {
   display: block;
-  height: 100px;
-  height: 280px;
   overflow: hidden; }
 
 .shares .apartment img {
@@ -1805,12 +1836,11 @@ header {
 .catalog-object-details .catalog-main .obj-cont .logo-company {
   margin: 20px 0 20px 0;
   display: block;
-  width: 175px;
-  height: 65px; }
+  max-width: 175px;
+  max-height: 65px; }
 
 .catalog-object-details .catalog-main .obj-cont .logo-company img {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
 
 .catalog-object-details .catalog-main .obj-cont .mail-cont {
   margin-bottom: 35px; }
@@ -1991,10 +2021,13 @@ header {
     font-weight: 400;
     line-height: 40px;
     text-transform: uppercase; }
-  .partners .partners-cont .info-cont img {
+  .partners .partners-cont .info-cont .logo-company {
+    display: block;
+    max-width: 170px;
+    max-height: 170px; }
+  .partners .partners-cont .info-cont .logo-company img {
     margin: 10px 0 0 0;
-    width: 170px;
-    height: 60px; }
+    width: 100%; }
   .partners .partners-cont .info-cont .link {
     display: inline-block;
     margin: 20px 0 0 0;
@@ -2228,6 +2261,381 @@ header {
 @media screen and (min-width: 992px) {
   .servises-details .servises-photo-cont a {
     height: 150px; } }
+
+.exhibition .exhibition-cont h2 {
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.exhibition .exhibition-cont .image {
+  display: block; }
+
+.exhibition .exhibition-cont .image img {
+  width: 100%; }
+
+.exhibition .exhibition-cont .date {
+  color: #bb1d20;
+  font-size: 16px;
+  font-weight: 400; }
+
+.exhibition .exhibition-cont p {
+  color: black;
+  font-size: 16px;
+  font-weight: 400; }
+
+.exhibition .exhibition-cont .logo-company {
+  display: block;
+  max-width: 130px;
+  max-height: 130px;
+  min-height: 50px; }
+
+.exhibition .exhibition-cont .logo-company img {
+  width: 100%; }
+
+.exhibition .exhibition-cont .text {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: justify;
+  max-height: 200px;
+  overflow: hidden; }
+
+.exhibition .exhibition-cont .link {
+  float: right;
+  color: #bb1d20;
+  font-size: 14px;
+  font-weight: 400; }
+
+.exhibition .exhibition-cont .link:hover {
+  color: black; }
+
+@media screen and (max-width: 767px) {
+  .exhibition {
+    margin: 40px 0 40px 0; }
+    .exhibition .exhibition-cont {
+      margin: 40px 0 0 0; }
+      .exhibition .exhibition-cont h2 {
+        margin: 0 0 15px 0; }
+      .exhibition .exhibition-cont .date {
+        margin: 10px 0 10px 0; }
+      .exhibition .exhibition-cont .text {
+        margin: 10px 0 10px 0; } }
+
+@media screen and (min-width: 768px) {
+  .exhibition {
+    margin: 40px 0 170px 0; }
+    .exhibition .exhibition-cont {
+      margin: 40px 0 0 0; }
+      .exhibition .exhibition-cont h2 {
+        margin: 0 0 15px 0;
+        font-size: 26px; }
+      .exhibition .exhibition-cont .image {
+        margin: 0 20px 0 0;
+        float: left;
+        width: 270px;
+        height: 180px; }
+      .exhibition .exhibition-cont .image img {
+        width: 100%;
+        height: 100%; }
+      .exhibition .exhibition-cont .date {
+        margin: 20px 0 20px 0;
+        color: #bb1d20;
+        font-size: 16px;
+        font-weight: 400; }
+      .exhibition .exhibition-cont p {
+        margin: 0 0 20px 0;
+        color: black;
+        font-size: 16px;
+        font-weight: 400; }
+      .exhibition .exhibition-cont .logo-company {
+        display: inline-block;
+        max-width: 130px;
+        max-height: 130px; }
+      .exhibition .exhibition-cont .logo-company img {
+        max-width: 100%; }
+      .exhibition .exhibition-cont .text {
+        margin: 10px 0 10px 0;
+        color: black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: justify;
+        max-height: 132px;
+        overflow: hidden; }
+      .exhibition .exhibition-cont .link {
+        float: right;
+        color: #bb1d20;
+        font-size: 14px;
+        font-weight: 400; }
+      .exhibition .exhibition-cont .link:hover {
+        color: black; } }
+
+.exhibition-details {
+  margin: 50px 0 110px 0; }
+  .exhibition-details .exhibition-cont h2 {
+    color: black;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .exhibition-details .exhibition-cont .info-cont .date {
+    color: #bb1d20;
+    font-size: 16px;
+    font-weight: 400; }
+  .exhibition-details .exhibition-cont .info-cont img {
+    width: 100%; }
+  .exhibition-details .exhibition-cont .info-cont p {
+    color: black;
+    font-size: 16px;
+    font-weight: 400; }
+  .exhibition-details .exhibition-cont .info-cont .button {
+    padding: 0 0 0 20px;
+    text-align: left;
+    width: 210px;
+    height: 40px;
+    background-color: #bb1d20;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    position: relative; }
+  .exhibition-details .exhibition-cont .info-cont .button:after {
+    content: "";
+    width: 26px;
+    height: 17px;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: url("../images/pdf-button.png") no-repeat; }
+  .exhibition-details .exhibition-cont .info-cont .button:hover {
+    background-color: #8a1719; }
+  .exhibition-details .exhibition-cont .text {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: justify;
+    height: 245px;
+    overflow: hidden; }
+  .exhibition-details .exhibition-cont .button-cont .button {
+    width: 220px;
+    height: 45px;
+    background-color: #bb1d20;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    text-transform: uppercase; }
+  .exhibition-details .exhibition-cont .button-cont .button:hover {
+    background-color: #8a1719; }
+
+@media screen and (max-width: 767px) {
+  .exhibition-details .exhibition-cont h2 {
+    margin: 0 0 15px 0; }
+  .exhibition-details .exhibition-cont .info-cont .date {
+    margin: 0 0 20px 0; }
+  .exhibition-details .exhibition-cont .info-cont img {
+    margin: 0 0 15px 0; }
+  .exhibition-details .exhibition-cont .info-cont p {
+    margin: 0 0 15px 0; }
+  .exhibition-details .exhibition-cont .info-cont .button {
+    margin: 30px auto 20px auto; }
+  .exhibition-details .exhibition-cont .servises-photo-cont {
+    margin: 40px 0 0 0; }
+    .exhibition-details .exhibition-cont .servises-photo-cont a {
+      margin: 10px 0;
+      display: block; }
+    .exhibition-details .exhibition-cont .servises-photo-cont a img {
+      width: 100%; }
+  .exhibition-details .exhibition-cont .button-cont {
+    margin: 20px 0 0 0; }
+    .exhibition-details .exhibition-cont .button-cont .button {
+      margin: 10px auto; } }
+
+@media screen and (min-width: 768px) {
+  .exhibition-details .exhibition-cont h2 {
+    margin: 0 0 15px 0; }
+  .exhibition-details .exhibition-cont .info-cont {
+    margin: 0 10px 0 0;
+    float: left; }
+    .exhibition-details .exhibition-cont .info-cont .date {
+      margin: 0 0 20px 0; }
+    .exhibition-details .exhibition-cont .info-cont img {
+      margin: 0 0 15px 0;
+      width: 210px;
+      height: 140px; }
+    .exhibition-details .exhibition-cont .info-cont p {
+      margin: 0 0 15px 0; }
+    .exhibition-details .exhibition-cont .info-cont .button {
+      margin: 30px 0 20px 0; }
+  .exhibition-details .exhibition-cont .text {
+    margin: 40px 0 0 0; }
+  .exhibition-details .exhibition-cont .servises-photo-cont {
+    margin: 40px 0 0 0; }
+    .exhibition-details .exhibition-cont .servises-photo-cont a.fancybox {
+      padding: 10px;
+      display: block;
+      float: left;
+      width: 25%;
+      height: 125px; }
+    .exhibition-details .exhibition-cont .servises-photo-cont a img {
+      width: 100%;
+      height: 100%; }
+  .exhibition-details .exhibition-cont .button-cont {
+    float: right;
+    margin: 20px 0 0 0; }
+    .exhibition-details .exhibition-cont .button-cont .button {
+      margin: 0 0 0 20px;
+      float: left; } }
+
+@media screen and (min-width: 992px) {
+  .exhibition-details .exhibition-cont .servises-photo-cont {
+    margin: 40px 0 0 0; }
+    .exhibition-details .exhibition-cont .servises-photo-cont a.fancybox {
+      padding: 10px;
+      display: block;
+      float: left;
+      width: 25%;
+      height: 150px; } }
+
+.contact-us .info-cont {
+  margin: 0 0 40px 0; }
+  .contact-us .info-cont h2 {
+    margin: 50px 0 20px 0;
+    color: #bb1d20;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .contact-us .info-cont p {
+    color: #010101;
+    font-size: 18px;
+    font-weight: 400; }
+  .contact-us .info-cont p:nth-child(n+10) {
+    font-size: 16px; }
+
+.contact-us .form-cont {
+  margin: 0 0 60px 0;
+  text-align: center; }
+  .contact-us .form-cont h2 {
+    margin: 0 0 40px 0;
+    color: #bb1d20;
+    font-size: 21px;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .contact-us .form-cont form label {
+    margin: 0 0 0 5%;
+    text-align: left;
+    display: block;
+    color: black;
+    font-size: 18px;
+    font-weight: 400; }
+  .contact-us .form-cont form input {
+    margin: 0 auto 20px;
+    text-align: left;
+    width: 90%;
+    height: 40px;
+    display: block;
+    border: 1px solid rgba(187, 29, 32, 0.75);
+    outline: none; }
+  .contact-us .form-cont textarea {
+    margin: 0 auto 20px;
+    text-align: left;
+    width: 90%;
+    height: 120px;
+    display: block;
+    border: 1px solid rgba(187, 29, 32, 0.75);
+    outline: none; }
+  .contact-us .form-cont .text {
+    margin: 0 0 10px 5%;
+    text-align: left;
+    color: #bb1d20;
+    font-size: 14px;
+    font-weight: 400; }
+  .contact-us .form-cont .button {
+    text-align: center;
+    border: none;
+    background-color: #b81203;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .contact-us .form-cont .button:hover {
+    background-color: #8a1719; }
+
+.contact-us #map {
+  width: 100%;
+  height: 530px; }
+
+@media screen and (min-width: 768px) {
+  .contact-us .info-cont {
+    margin: 0 0 40px 0;
+    float: left;
+    width: 50%; }
+    .contact-us .info-cont h2 {
+      margin: 50px 0 20px 0; }
+  .contact-us .form-cont {
+    margin: 50px 0 0 0;
+    float: left;
+    width: 50%;
+    text-align: center; }
+    .contact-us .form-cont h2 {
+      margin: 0 0 40px 0;
+      font-size: 24px; }
+    .contact-us .form-cont form label {
+      margin: 0 0 0 5%; }
+    .contact-us .form-cont form input {
+      padding: 0 0 0 15px;
+      margin: 0 auto 20px;
+      text-align: left;
+      width: 90%;
+      height: 40px;
+      display: block;
+      border: 1px solid rgba(187, 29, 32, 0.75);
+      outline: none; }
+    .contact-us .form-cont textarea {
+      margin: 0 auto 20px; }
+    .contact-us .form-cont .text {
+      margin: 0 0 10px 5%; }
+    .contact-us .form-cont .button {
+      text-align: center; }
+  .contact-us #map {
+    width: 100%;
+    height: 530px; }
+  .contact-us #map iframe {
+    scrollwheel: false; } }
+
+.about-us {
+  margin: 30px 0 100px 0; }
+  .about-us h2 {
+    margin: 0 0 10px 0;
+    color: black;
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center; }
+  .about-us hr {
+    margin: 0 auto 30px auto;
+    width: 80px;
+    height: 1px;
+    border: none;
+    background-color: black; }
+  .about-us img {
+    width: 100%; }
+  .about-us .text {
+    margin: 20px 0 0 0;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: justify; }
+
+@media screen and (min-width: 768px) {
+  .about-us img {
+    margin: 0 10px 0 0;
+    float: left;
+    width: 390px;
+    height: 300px; } }
 
 footer {
   background-color: #101010;

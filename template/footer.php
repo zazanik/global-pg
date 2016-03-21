@@ -36,21 +36,15 @@
 <!--                <span class="modal_close"></span>-->
                 <form action="#">
                     <h3>Запрос на сотрудничество</h3>
-
                     <label for="name-of-company">Название компании*</label>
                     <input required id="name-of-company" type="text" placeholder=""/>
-
                     <label for="LFF">Контактное лицо (ФИО)*</label>
                     <input required id="LFF" type="text" placeholder=""/>
-
                     <label for="telephon">Телефон*</label>
                     <input required id="telephon" type="tel" placeholder=""/>
-
                     <label for="email">E-mail*</label>
                     <input required id="email" type="email" placeholder=""/>
-
                     <textarea name="you message" id="message"></textarea>
-
                     <input class="button" type="submit" value="Отправить"/>
                 </form>
             </div>
@@ -65,21 +59,15 @@
                 <!--                <span class="modal_close"></span>-->
                 <form action="#">
                     <h3>Запрос на сотрудничество</h3>
-
                     <label for="name-of-company">Название компании*</label>
                     <input required id="name-of-company" type="text" placeholder=""/>
-
                     <label for="LFF">Контактное лицо (ФИО)*</label>
                     <input required id="LFF" type="text" placeholder=""/>
-
                     <label for="telephon">Телефон*</label>
                     <input required id="telephon" type="tel" placeholder=""/>
-
                     <label for="email">E-mail*</label>
                     <input required id="email" type="email" placeholder=""/>
-
                     <textarea name="you message" id="message"></textarea>
-
                     <input class="button" type="submit" value="Отправить"/>
                 </form>
             </div>
@@ -87,6 +75,57 @@
         </div>
     </div>
 
+    <!--modal window for Запрос на участие -->
+
+    <div class="partners-details-form request-to-participate">
+        <div class="container">
+            <div class="modal_form">
+                <!--                <span class="modal_close"></span>-->
+                <form action="#">
+                    <h3>регистрация на участие в выставке</h3>
+                    <label for="name-of-company">Название компании*</label>
+                    <input required id="name-of-company" type="text" placeholder=""/>
+                    <label for="LFF">Контактное лицо (ФИО)*</label>
+                    <input required id="LFF" type="text" placeholder=""/>
+                    <label for="telephon">Телефон*</label>
+                    <input required id="telephon" type="tel" placeholder=""/>
+                    <label for="email">E-mail*</label>
+                    <input required id="email" type="email" placeholder=""/>
+                    <label for="size">Размер желаемой выставочной площади*</label>
+                    <input required id="size" type="text" placeholder=""/>
+                    <label for="message">Ваше сообщение</label>
+                    <textarea name="you message" id="message"></textarea>
+                    <input class="button" type="submit" value="Отправить"/>
+                </form>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </div>
+
+    <!--modal window for Посетить выставку -->
+
+    <div class="partners-details-form visit-participate">
+        <div class="container">
+            <div class="modal_form">
+                <!--                <span class="modal_close"></span>-->
+                <form action="#">
+                    <h3>регистрация на посещение выставке</h3>
+                    <label for="LFF">ФИО*</label>
+                    <input required id="LFF" type="text" placeholder=""/>
+                    <label for="telephon">Телефон*</label>
+                    <input required id="telephon" type="tel" placeholder=""/>
+                    <label for="email">E-mail*</label>
+                    <input required id="email" type="email" placeholder=""/>
+                    <label for="size">Цель посещения выставки*</label>
+                    <input required id="size" type="text" placeholder=""/>
+                    <label for="message">Ваше сообщение</label>
+                    <textarea name="you message" id="message"></textarea>
+                    <input class="button" type="submit" value="Отправить"/>
+                </form>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </div>
 
 </footer>
 <script src="js/main.js"></script>

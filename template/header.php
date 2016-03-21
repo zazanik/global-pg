@@ -23,7 +23,8 @@
 <header>
     <div class="h-page">
         <div class="container">
-            <button class="hamburger">&#9776;</button>
+<!--            <button class="hamburger">&#9776;</button>-->
+            <button class="hamburger"><img src="images/hamburger.png" alt=""/></button>
             <button class="cross">&#735;</button>
             <nav id="navigation">
                 <ul>
@@ -37,9 +38,10 @@
                 </ul>
             </nav>
             <div class="lang">
+                <a href="#">ru</a>
                 <ul>
-                    <li class="rus"><a href="#">Rus</a></li>
-                    <li class="eng"><a href="#">Eng</a></li>
+                    <li><a href="#">ru</a></li>
+                    <li><a href="#">en</a></li>
                 </ul>
             </div>
         </div>

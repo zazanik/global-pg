@@ -37,12 +37,11 @@
       .logo-company{
         margin: 20px 0 20px 0;
         display: block;
-        width: 175px;
-        height: 65px;
+        max-width: 175px;
+        max-height: 65px;
       }
       .logo-company img{
         width: 100%;
-        height: 100%;
       }
       .mail-cont{
         margin-bottom: 35px;

@@ -29,6 +29,8 @@
     }
     .tabs{
       margin: 0 0 20px 0;
+      position: relative;
+      z-index: 9999;
     }
     .tab{
       margin: 0 1% 0 0;
@@ -155,20 +157,36 @@
     }
   }
 
-  .rent{
+  .swim-first{
     display: none;
+    width: 75%;
+    height: 585px;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    z-index: 102;
   }
-  .sale{
+  .swim-second{
     display: none;
+    width: 75%;
+    height: 585px;
+    position: absolute;
+    top: 0;
+    left: 25%;
   }
-
+  .rent:hover{
+    display: block;
+  }
+  .sale:hover{
+    display: block;
+  }
   .swiming-towns{
     //margin: 0 0 0 26%;
     position: absolute;
-    z-index: 999999;
+    z-index: 101;
     top: 0;
     right: 0;
-    width: 74%;
+    width: 99%;
     background-color: rgb(187, 29, 32);
   //
     min-height: 400px;

@@ -11,7 +11,7 @@
         <div class="partners-cont">
             <h2>Название компании</h2>
             <div class="info-cont clearfix">
-                <a href="#"><img src="images/logo-company.png" alt=""/></a>
+                <a class="logo-company" href="#"><img src="images/logo-company.png" alt=""/></a>
                 <div><a class="link" href="#">www.companyname.com</a></div>
                 <p><span>Город</span></p>
                 <p><span>Тип</span></p>
@@ -36,7 +36,7 @@
         <div class="partners-cont">
             <h2>Название компании</h2>
             <div class="info-cont clearfix">
-                <a href="#"><img src="images/logo-company.png" alt=""/></a>
+                <a class="logo-company" href="#"><img src="images/logo-company.png" alt=""/></a>
                 <div><a class="link" href="#">www.companyname.com</a></div>
                 <p><span>Город</span></p>
                 <p><span>Тип</span></p>
@@ -61,7 +61,7 @@
         <div class="partners-cont">
             <h2>Название компании</h2>
             <div class="info-cont clearfix">
-                <a href="#"><img src="images/logo-company.png" alt=""/></a>
+                <a class="logo-company" href="#"><img src="images/logo-company.png" alt=""/></a>
                 <div><a class="link" href="#">www.companyname.com</a></div>
                 <p><span>Город</span></p>
                 <p><span>Тип</span></p>

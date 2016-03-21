@@ -13,10 +13,14 @@
       text-transform: uppercase;
     }
     .info-cont{
-      img{
+      .logo-company{
+        display: block;
+        max-width: 170px;
+        max-height: 170px;
+      }
+      .logo-company img{
         margin: 10px 0 0 0;
-        width: 170px;
-        height: 60px;
+        width: 100%;
       }
       .link{
         display: inline-block;
